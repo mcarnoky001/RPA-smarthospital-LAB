@@ -1,0 +1,24 @@
+mat-table {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+}
+
+.searchWrapper {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+.searchWrapper mat-form-field{
+  width: 100%;
+}
+
+mat-header-cell {
+  color: grey;
+}
+
+.mat-row:hover {
+  background-color: #5d8ea3;
+}

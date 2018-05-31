@@ -1,0 +1,30 @@
+<div class="searchWrapper">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Hladat">
+  </mat-form-field>
+</div>
+<mat-table #table [dataSource]="dataSource">
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Meno </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="surname">
+    <mat-header-cell *matHeaderCellDef> Priezvisko </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
+  </ng-container>
+  <!-- Weight Column -->
+  <ng-container matColumnDef="idNo">
+    <mat-header-cell *matHeaderCellDef> Rodne cislo </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.idNo}} </mat-cell>
+  </ng-container>
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="insurance">
+    <mat-header-cell *matHeaderCellDef> Poistovna </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.insurance}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openPatient(row)"></mat-row>
+</mat-table>

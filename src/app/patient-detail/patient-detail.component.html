@@ -1,0 +1,54 @@
+<div class="topDetail">
+  <div class="row">
+    <div class="col-md-3 imgColumnWrapper">
+      <div class="imgWrapper">
+        <img *ngIf="patient.sex == man" src="assets/man.jpg" alt="Avatar" style="width:200px">
+        <img *ngIf="patient.sex == woman" src="assets/woman.jpg" alt="Avatar" style="width:200px">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <form #form="ngForm" style="margin-top:10px">
+        <div class="container">
+          <mat-form-field>
+            <input id="name" name="name" ngModel matInput placeholder="Meno">{{patient.name}}
+          </mat-form-field>
+          <mat-form-field>
+            <input id="surname" name="surname" ngModel matInput placeholder="Priezvisko">{{patient.surname}}
+          </mat-form-field>
+          <mat-form-field>
+            <input id="id" name="id" ngModel matInput placeholder="Rodne cislo">{{patient.idNo}}
+          </mat-form-field>
+          <mat-form-field>
+            <input id="insurance" name="insurance" ngModel matInput placeholder="Poistovna">{{patient.insurance}}
+          </mat-form-field>
+          <mat-form-field>
+            <input id="address" name="address" ngModel matInput placeholder="Adresa">{{patient.address}}
+          </mat-form-field>
+          <mat-form-field>
+            <input id="number" name="number" ngModel matInput placeholder="Telefon">{{patient.tel}}
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-md-12 bottomDetail">
+  <form #form="ngForm" style="margin-top:10px">
+    <div class="row">
+      <div class="container">
+        <mat-form-field style="margin-top: 5px;">
+          <textarea id="oa" matInput placeholder="osobna anamneza">{{anamneza.osobna}}</textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea id="pa" matInput placeholder="pracovna anamneza">{{anamneza.pracovna}}</textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea id="ra" matInput placeholder="rodinna anamneza">{{anamneza.rodinna}}</textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea id="av" matInput placeholder="aktualne vysetrenia"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>
