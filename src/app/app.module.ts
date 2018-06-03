@@ -49,7 +49,8 @@ import { PatientDetailComponent } from './patient-detail/patient-detail.componen
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'main', component: MainComponent }
+  { path: 'main', component: MainComponent },
+  { path: 'patient-detail/:id', component: PatientDetailComponent }
 ];
 
 @NgModule({
@@ -67,6 +68,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     rootRouting,
+    MatTabsModule,
 
     RouterModule.forRoot(
       appRoutes      
