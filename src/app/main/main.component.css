@@ -7,9 +7,10 @@ mat-table {
 
 .searchWrapper {
   width: 50%;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 5%;
+  white-space: nowrap;
 }
 .searchWrapper mat-form-field{
   width: 100%;
@@ -21,4 +22,8 @@ mat-header-cell {
 
 .mat-row:hover {
   background-color: #5d8ea3;
+}
+
+.btn{
+margin-bottom: 10px;
 }

@@ -1,7 +1,8 @@
 <div class="searchWrapper">
   <mat-form-field>
-    <input id="searchInput" matInput (keyup)="applyFilter($event.target.value)" placeholder="Hladat">
+    <input id="searchInput" matInput #search placeholder="Hľadať">
   </mat-form-field>
+  <button id="filter" style="display: inline-block;" class="btn"(click)="applyFilter(search.value)" type="button">Filter</button>
 </div>
 <mat-table id="PatientsTable" [dataSource]="dataSource">
   <!-- Position Column -->
@@ -16,12 +17,12 @@
   </ng-container>
   <!-- Weight Column -->
   <ng-container matColumnDef="idNo">
-    <mat-header-cell *matHeaderCellDef> Rodne cislo </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Rodné číslo </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.idNo}} </mat-cell>
   </ng-container>
   <!-- Symbol Column -->
   <ng-container matColumnDef="insurance">
-    <mat-header-cell *matHeaderCellDef> Poistovna </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Poisťovňa </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.insurance}} </mat-cell>
   </ng-container>
 
