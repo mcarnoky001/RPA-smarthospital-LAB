@@ -1,9 +1,14 @@
 <div class="home-page">
+  <div class="imageWrapper">
+    <img src="assets/lab.png" alt="">
+  </div>
   <div class="container page loginContainer">
-    <input  id="username" style="margin-bottom:20px" placeholder="Email" class="form-control form-control-lg" type="text" />
-    <input   id="password" style="margin-bottom:20px" placeholder="Password" class="form-control form-control-lg" type="password" />
-    <button  id="submitBtn" class="btn btn-lg btn-info pull-xs-right" (click)="submit()">
-      Submit
-    </button>
+    <input id="username" style="margin-bottom:20px" placeholder="Email" class="form-control form-control-lg" type="text" />
+    <input id="password" style="margin-bottom:20px" placeholder="Password" class="form-control form-control-lg" type="password" />
+    <div class="btnWrapper">
+      <button id="submitBtn" class="btn btn-lg btn-info pull-xs-right" (click)="submit()">
+        Submit
+      </button>
+    </div>
   </div>
 </div>
