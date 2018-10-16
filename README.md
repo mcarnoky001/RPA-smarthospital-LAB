@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Preview
 
-![Image of preview1](preview1.PNG)
+![Image of preview1](preview.PNG)
 
 ![Image of preview2](preview2.PNG)
 
